@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body{
     background-color: #202124;
     height: 100vh;
@@ -25,8 +26,9 @@ header .options a {
     color: whitesmoke;
 }
 
-header .options:hover{
-background-color: whitesmoke;
+header .options a:hover{
+text-decoration: underline #686868;
+
 }
 header .options a img{
     border-radius: 50%;
@@ -37,10 +39,61 @@ header .options a img{
 .dots{
     display: inline-block;
     background-image: url(imagenes/dots.svg);
-    height: 32px;
-    width: 32px;
+    height: 24px;
+    width: 24px;
+}
+.dots:hover{
+    border-radius: 50%;
+    background-color: #46484d;
 }
 
+
+main{
+    height: calc(100% - 60px - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+main .container .searcher{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 48px;
+    width: 650px;
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 24px;
+}
+
+
+main .container .searcher input {
+    border-radius: 24px;
+    height: 48px;
+    width: 600px;
+    padding: 8px 12px;
+    color: whitesmoke;
+    border: none;
+    background-color: transparent;
+    font-size: medium;
+    align-content: center;
+    
+}
+main .container .searcher button {
+    border: none;
+    background-color: transparent;
+    
+}
+
+main .container .searcher input:hover{
+    background-color: #686868;
+}
 .search-logo{
     display: inline-block;
     height: 24px;
@@ -65,41 +118,6 @@ header .options a img{
     background-size: cover;
     background-repeat: no-repeat;
 }
-main{
-    height: calc(100% - 60px - 90px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-}
-main .container .searcher{
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    height: 40px;
-    width: 450px;
-    padding: 8px 12px;
-    border: 1px solid gray;
-    border-radius: 24px;
-}
-main .container .searcher button {
-    border: none;
-    background-color: transparent;
-}
-
-
-main .container .searcher input {
-    width: 100%;
-    border: none;
-    color: whitesmoke;
-    background-color: transparent;
-}
 main .container .searcher-buttons button{
     border: none;
     border-radius: 6px;
@@ -109,6 +127,11 @@ main .container .searcher-buttons button{
     padding: 0 16px;
     color: #e8eaed;
     font-size: 14px;
+}
+
+main .container .searcher-buttons button:hover{
+    background-color: #505258;
+    border-color: #686868;
 }
 main .container figure{
     height: 92px;
@@ -147,4 +170,9 @@ footer section.more-info div {
 footer section.more-info div a {
     color: #999da2;
     text-decoration: none;
+}
+
+footer section.more-info a:hover {
+    text-decoration: underline #686868;
+
 }
